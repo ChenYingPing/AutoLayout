@@ -17,7 +17,9 @@
 #import "HomeTableViewCell.h"
 
 @interface HomeTableViewController() <UICollectionViewDataSource,UICollectionViewDelegate>
+
 @property (nonatomic, weak) HomeHeaderView *header;
+
 @end
 
 @implementation HomeTableViewController
@@ -87,7 +89,9 @@
     
     [header.collectionView registerClass:[DoctOfficeCell class] forCellWithReuseIdentifier:DoctOfficeCellID];
 }
+
 #pragma mark - 数据源方法
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 8;
@@ -106,12 +110,14 @@
 }
 
 #pragma mark - 代理方法
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"点击了第%ld行",(long)indexPath.item);
 }
 
 #pragma mark - UITableView Datasource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 7;
 }
@@ -124,10 +130,12 @@
 }
 
 #pragma mark - UITableView Delegate methods
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 82;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
      NSLog(@"点击了第%ld行",(long)indexPath.row);
 }

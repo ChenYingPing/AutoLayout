@@ -7,6 +7,7 @@
 //
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kGetWidth(__A) (__A*kScreenWidth/375)
+
 #import "HomeHeaderView.h"
 
 @interface HomeHeaderView() 
@@ -173,6 +174,7 @@
 
 }
 #pragma mark - btnClick
+
 - (void)firstBtnClick
 {
     NSLog(@"点击了firstBtnClick");

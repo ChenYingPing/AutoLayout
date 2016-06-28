@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstViewHeight;
+
 @property (nonatomic, assign) CGFloat constant;
 
 @end
